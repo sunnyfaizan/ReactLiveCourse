@@ -4,7 +4,9 @@
   "description": "This is a React Live Course By Akshay Saini",
   "main": "app.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "repository": {
     "type": "git",
@@ -17,11 +19,16 @@
   },
   "homepage": "https://github.com/sunnyfaizan/ReactLiveCourse#readme",
   "devDependencies": {
+    "@babel/core": "^7.20.12",
     "parcel": "^2.8.3",
     "process": "^0.11.10"
   },
   "dependencies": {
+    "babel-plugin-transform-remove-console": "^6.9.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
-  }
+  },
+  "browsersList": [
+    "last 2 versions"
+  ]
 }
