@@ -1,3 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800&display=swap');
 body {
-    background-color: lightgray;
+  margin: 0px;
+  padding: 0px 100px;
+  font-family: Exo\ 2,sans-serif;
+  background-color: black;
+  color: white;
 }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+}
+.navbarLogo {
+    width: 100px;
+} 
+.navbar > ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.navbar > ul > li {
+    padding-left: 25px;
+    font-size: 17px;
+}
+
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.card {
+    margin: 10px;
+    width: 225px;
+    border: 1px solid white;
+    padding: 10px;
+}
+
+.card > img {
+    width: 225px;
+}
+
+h3, h5, h6 {
+    line-height: 1;
+}
+
