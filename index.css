@@ -46,3 +46,22 @@ h3, h5, h6 {
     line-height: 1;
 }
 
+.searchDiv {
+    display: flex;
+    justify-content: center;
+}
+
+.searchInput {
+    border: 1px solid white;
+    height: 28px;
+    width: 300px;
+    background: transparent;
+    color: white;
+    padding: 3px;
+}
+
+.searchBtn {
+    height: 35px;
+    width: 100px;
+    margin-left: 10px;
+}
