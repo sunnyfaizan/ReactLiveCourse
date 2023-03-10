@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800&display=swap");
 body {
   margin: 0px;
   padding: 0px 100px;
-  font-family: Exo\ 2,sans-serif;
+  font-family: Exo\2, sans-serif;
   background-color: black;
   color: white;
 }
@@ -13,55 +13,137 @@ body {
   padding-top: 10px;
 }
 .navbarLogo {
-    width: 100px;
-} 
+  width: 100px;
+}
 .navbar > ul {
-    list-style-type: none;
-    display: flex;
+  list-style-type: none;
+  display: flex;
 }
 
 .navbar > ul > li {
-    padding-left: 25px;
-    font-size: 17px;
+  padding-left: 25px;
+  font-size: 17px;
 }
 
 .cardContainer {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 .card {
-    margin: 10px;
-    width: 225px;
-    border: 1px solid white;
-    padding: 10px;
+  margin: 10px;
+  width: 225px;
+  border: 1px solid white;
+  padding: 10px;
 }
 
 .card > img {
-    width: 225px;
+  width: 225px;
 }
 
-h3, h5, h6 {
-    line-height: 1;
+h3,
+h5,
+h6 {
+  line-height: 1;
 }
 
 .searchDiv {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .searchInput {
-    border: 1px solid white;
-    height: 28px;
-    width: 300px;
-    background: transparent;
-    color: white;
-    padding: 3px;
+  border: 1px solid white;
+  height: 28px;
+  width: 300px;
+  background: transparent;
+  color: white;
+  padding: 3px;
 }
 
 .searchBtn {
-    height: 35px;
-    width: 100px;
-    margin-left: 10px;
+  height: 35px;
+  width: 100px;
+  margin-left: 10px;
+}
+
+.card-shimmer {
+  position: relative;
+  -webkit-box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 0px;
+  /* height: 500px; */
+  overflow: hidden;
+  width: 225px;
+  margin: 10px;
+  padding: 10px;
+}
+  .shimmerBG {
+    animation-duration: 2.2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: shimmer;
+    animation-timing-function: linear;
+    background: #e5f0fb;
+    background: linear-gradient(to right, #c1dceb 4%, #a3cbe1 25%, #c1dceb 36%);
+    background-size: 1200px 100%;
+  }
+
+  @-webkit-keyframes shimmer {
+    0% {
+      background-position: -100% 0;
+    }
+    100% {
+      background-position: 100% 0;
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -1200px 0;
+    }
+    100% {
+      background-position: 1200px 0;
+    }
+  }
+
+  .media {
+    height: 150px;
+  }
+
+  .p-32 {
+    padding: 0px;
+    margin-top: 8px;
+  }
+
+  .title-line {
+    height: 24px;
+    width: 100%;
+    margin-bottom: 8px;
+    border-radius: 20px;
+  }
+
+  .content-line {
+    height: 8px;
+    width: 100%;
+    margin-bottom: 8px;
+    border-radius: 8px;
+  }
+
+  .end {
+    width: 40%;
+  }
+
+
+.m-t-24 {
+  margin-top: 12px;
+}
+
+.noResFound {
+    color: red;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
 }
