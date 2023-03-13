@@ -17,9 +17,9 @@ const Header = () => {
         <li>Cart</li>
         <li>
           {isLoggedIn ? (
-            <button onClick={() => (setIsLoggedIn(false))}>Login</button>
+            <button className="btn btn-primary" onClick={() => (setIsLoggedIn(false))}>Login</button>
           ) : (
-            <button onClick={() => (setIsLoggedIn(true))}>Logout</button>
+            <button className="btn btn-primary" onClick={() => (setIsLoggedIn(true))}>Logout</button>
           )}
         </li>
       </ul>

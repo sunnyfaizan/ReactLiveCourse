@@ -2,8 +2,8 @@
 body {
   margin: 0px;
   padding: 0px 100px;
-  font-family: Exo\2, sans-serif;
-  background-color: black;
+  font-family: 'Exo\2', sans-serif !important;
+  background-color: black !important;
   color: white;
 }
 .navbar {
@@ -11,6 +11,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding-top: 10px;
+  color: #ffffff;
 }
 .navbarLogo {
   width: 100px;
@@ -32,14 +33,21 @@ body {
 }
 
 .card {
+  max-width: 100%;
+  display: block;
   margin: 10px;
-  width: 225px;
-  border: 1px solid white;
+  /* border: 1px solid white !important; */
+  border-radius: 0px !important;
   padding: 10px;
+  background-color: black !important;
+  color: #ffffff;
 }
 
 .card > img {
-  width: 225px;
+    max-width: 100%; 
+    display: block; 
+    height: auto;
+  margin: 0px auto;
 }
 
 h3,
@@ -48,26 +56,43 @@ h6 {
   line-height: 1;
 }
 
+.restaurantCard > h3 {
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.restaurantCard > h5 {
+    font-size: 13px;
+}
+
+.restaurantCard > h6 {
+    font-size: 12px;
+}
+
 .searchDiv {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .searchInput {
   border: 1px solid white;
-  height: 28px;
-  width: 300px;
   background: transparent;
   color: white;
+  border-radius: 0px !important;
   padding: 3px;
 }
 
 .searchBtn {
-  height: 35px;
-  width: 100px;
+  border-radius: 0px !important;
   margin-left: 10px;
+  width: 150px;
 }
-
+.shimmerEffect {
+    display: flex;
+    flex-wrap: wrap;
+}
 .card-shimmer {
   position: relative;
   -webkit-box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
@@ -76,7 +101,6 @@ h6 {
   border-radius: 0px;
   /* height: 500px; */
   overflow: hidden;
-  width: 225px;
   margin: 10px;
   padding: 10px;
 }
@@ -143,7 +167,6 @@ h6 {
 
 .noResFound {
     color: red;
-    /* text-align: center; */
-    display: flex;
-    justify-content: center;
+    text-align: center;
+    font-size: 22px;
 }
