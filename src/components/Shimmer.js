@@ -2,7 +2,7 @@ const Shimmer = () => {
   return (
     <div className="shimmerEffect">
       {[...Array(10)].map((e, i) => (
-        <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4">
+        <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4" key={i}>
           <div className="card-shimmer">
             <div className="shimmerBG media"></div>
             <div className="p-32">

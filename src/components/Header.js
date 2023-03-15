@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "../../assets/logonew.jpg";
 import user from "../../assets/user.png";
 
@@ -11,9 +12,9 @@ const Header = () => {
         <img className="navbarLogo" src={logo} />
       </a>
       <ul>
-        <li>Home</li>
-        <li>About Us</li>
-        <li>Contact Us</li>
+        <li><Link to='/'>Home</Link></li>
+        <li><Link to='/about'>About Us</Link></li>
+        <li><Link to='/contact'>Contact Us</Link></li>
         <li>Cart</li>
         <li>
           {isLoggedIn ? (

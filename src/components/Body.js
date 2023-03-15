@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 // import { RestaurantList } from "../constants";
 import { RestaurantCard } from "./RestaurantCard";
 import Shimmer from "./Shimmer";
@@ -38,7 +39,7 @@ const Body = () => {
   ) : (
     <>
       <div className="row justify-content-center">
-        <div className="col-md-7">
+        <div className="col-md-6">
           <div className="searchDiv">
             <input
               type="text"
@@ -75,7 +76,7 @@ const Body = () => {
         <div className="cardContainer">
           {filteredRestaurant.map((restaurant) => {
             return (
-              <RestaurantCard {...restaurant.data} key={restaurant.data?.id} />
+              <RestaurantCard {...restaurant.data} key={restaurant.data?.id}/>
             );
           })}
         </div>

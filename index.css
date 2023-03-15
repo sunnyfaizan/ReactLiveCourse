@@ -4,7 +4,7 @@ body {
   padding: 0px 100px;
   font-family: 'Exo\2', sans-serif !important;
   background-color: black !important;
-  color: white;
+  color: white !important;
 }
 .navbar {
   display: flex;
@@ -24,8 +24,12 @@ body {
 .navbar > ul > li {
   padding-left: 25px;
   font-size: 17px;
+  text-decoration: none;
 }
 
+.navbar > ul > li:hover {
+  font-weight: bold;
+}
 .cardContainer {
   display: flex;
   flex-wrap: wrap;
@@ -54,6 +58,11 @@ h3,
 h5,
 h6 {
   line-height: 1;
+}
+ 
+a {
+    text-decoration: none !important;
+    color: #FFFFFF !important;
 }
 
 .restaurantCard > h3 {
@@ -169,4 +178,8 @@ h6 {
     color: red;
     text-align: center;
     font-size: 22px;
+}
+
+.menuCard {
+  border-bottom: 1px solid lightgray;
 }
