@@ -1,14 +1,14 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Body from "./components/Body";
-import About from "./components/About";
 import Error from "./components/Error";
 import { createBrowserRouter, Outlet } from "react-router-dom";
 import { RouterProvider } from "react-router-dom";
 import Contact from "./components/Contact";
 import RestaurantMenu from "./components/RestaurantMenu";
+import Shimmer from "./components/Shimmer";
 
 //JSX Element
 const Heading = (
@@ -48,6 +48,9 @@ const HeaderNavbar = () => {
   );
 };
 
+const About = lazy(() => import("./components/About"));
+const Instamart = lazy(() => import("./components/Instamart"));
+
 const AppLayout = () => {
   return (
     <React.Fragment>
@@ -70,7 +73,11 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <About />,
+        element: (
+          <Suspense fallback={<h1>Loading.......</h1>}>
+            <About />
+          </Suspense>
+        ),
       },
       {
         path: "/contact",
@@ -78,7 +85,15 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/restaurant/:id",
-        element: <RestaurantMenu />
+        element: <RestaurantMenu />,
+      },
+      {
+        path: "/instamart",
+        element: (
+          <Suspense fallback={<Shimmer />}>
+            <Instamart />
+          </Suspense>
+        ),
       },
     ],
   },

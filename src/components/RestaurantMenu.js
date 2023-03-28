@@ -4,25 +4,13 @@ import { Img_Cdn_Link } from "../constants";
 import Shimmer from "./Shimmer";
 import { Icon } from "@iconify/react";
 import MenuCard from "./MenuCard";
+import useRestaurantMenu from "../utils/useRestaurantMenu";
 
 const RestaurantMenu = () => {
   const params = useParams();
 
-  const [restaurantMenu, SetRestaurantMenu] = useState();
+  const restaurantMenu = useRestaurantMenu(params.id);
 
-  useState(() => {
-    fetchRestaurantMenu();
-  }, []);
-
-  async function fetchRestaurantMenu() {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/menu/v4/full?lat=12.9351929&lng=77.62448069999999&menuId=" +
-        params.id
-    );
-    const json = await data.json();
-    console.log(json?.data);
-    SetRestaurantMenu(json?.data);
-  }
   return !restaurantMenu ? (
     <Shimmer />
   ) : (
